@@ -5,7 +5,7 @@ import Home from './pages/Home'
 import Price from './pages/Price/Price'
 import Difficulty from './pages/Difficulty'
 import Searches from './pages/Searches'
-import Remaining from './pages/Remaining'
+import Remaining from './pages/Remaining/Remaining'
 
 function App() {
   return (

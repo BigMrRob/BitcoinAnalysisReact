@@ -7,10 +7,17 @@
   font-family: 'Lato', sans-serif;
 }
 
-.home, .reports, .products {
-  display: flex;
-  height: 90vh;
-  align-items: center;
-  justify-content: center;
-  font-size: 3rem;
+
+.center-content {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.chart-header {
+  margin-top: 50px;
 }
