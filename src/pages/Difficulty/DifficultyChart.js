@@ -1,44 +1,35 @@
-import React, { Component } from 'react';
-import Data from '../../data/remaining-coins'
+import React from 'react'
+import DifficultyData from '../../data/difficulty'
 import Chart from "react-google-charts";
-import PriceHistory from '../../data/market-price'
 
-let result = []
-
-export default class RemainingChart extends Component {
+class DifficultyChart extends React.Component {
     constructor(props) {
         super(props)
 
         this.state = {
             data: null
         }
-
     }
 
     componentDidMount() {
-        result = [
-            ['Time', 'Remaining Coins']
-        ]
-
-        console.log(Data.values[0].x)
         
-        let date = null
-        for(let i = 0; i < PriceHistory.values.length; i=i+1) {
-            date = new Date(Data.values[i].x * 1000)
-            console.log(new Date(1442534400*1000))
-            
-            result.push([date, 21000000-Data.values[i].y])
+        let result = []
+        result.push(['Time', 'Relative Difficulty'])
+
+        for (let i = 0; i < DifficultyData.values.length; i++) {
+            result.push([new Date(DifficultyData.values[i].x * 1000) , DifficultyData.values[i].y])
         }
+
+        console.log(result)
+
         this.setState({
             data: result
         })
-
-        
-    }
+    }   
     render() {
         return (
             <div className='center-content'>
-               <Chart
+                <Chart
                 width={'940px'}
                 height={'600px'}
                 chartType="LineChart"
@@ -49,7 +40,7 @@ export default class RemainingChart extends Component {
                       title: 'Time',
                     },
                     vAxis: {
-                      title: 'Remaining Coins',
+                      title: 'Difficulty',
                     },
                     series: {
                       1: { curveType: 'function' },
@@ -58,6 +49,10 @@ export default class RemainingChart extends Component {
                   rootProps={{ 'data-testid': '2' }}
                 />                
             </div>
-        );
+        )
+
+        
     }
 }
+
+export default DifficultyChart

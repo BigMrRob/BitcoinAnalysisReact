@@ -22,14 +22,11 @@ class Remaining extends React.Component {
     render() {
 
         return (
-            <>  
-                <div className="chart-header center-content">
-                    <h1 className="center-text">Price of Bitcoin Against the Number of Remaining Coins</h1>
-                </div>
-                <div className="center-content">
-                    <RemainingChart />
-                </div>
-            </>
+            <div>  
+                
+                <h1 className="chart-header center-text">Price of Bitcoin Against the Number of Remaining Coins</h1>
+                <br></br><RemainingChart />
+            </div>
         )
     }
 

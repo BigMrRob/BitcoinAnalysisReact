@@ -17,6 +17,8 @@ function Navbar() {
             <Link to="#" className='menu-bars'>
                 <FaIcons.FaBars onClick={toggleSidebar}/>
             </Link>
+            <button className='nav-bar-right'>Login</button>
+            
         </div>
         <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
             <ul className='nav-menu-items'>

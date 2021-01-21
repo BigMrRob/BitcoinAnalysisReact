@@ -1,12 +1,13 @@
 import React from 'react'
 import PriceView from './PriceView'
-import './Price.css'
-  
+import AnimatedBackground from '../../components/AnimatedBackground'
+
 function Price() {
     return (
         <div>
-            <h1 className='header'>Price of Bitcoin Over Time</h1>
-            <PriceView />
+            <br></br>
+            <h1 className='center-text'>Price of Bitcoin Over Time</h1>
+            <br></br><PriceView />
         </div>
     )
 }
