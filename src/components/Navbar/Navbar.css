@@ -74,10 +74,5 @@ span {
 }
 .nav-bar-right {
     position: absolute;
-    left: 95%;
-    border-radius: 5px;
-    background-color: #060b26;
-    padding: 4px;
-    color: white;
-    box-shadow: 4px 4px 50px black;
+    left: 89%;
 }

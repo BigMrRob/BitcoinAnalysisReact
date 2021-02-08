@@ -5,6 +5,9 @@ import { Link } from 'react-router-dom'
 import { SidebarData } from '../SidebarData'
 import './Navbar.css'
 import { IconContext } from 'react-icons'
+import Button from 'react-bootstrap/Button'
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 
 function Navbar() {
     const [sidebar, setSidebar] = useState(false)
@@ -17,7 +20,11 @@ function Navbar() {
             <Link to="#" className='menu-bars'>
                 <FaIcons.FaBars onClick={toggleSidebar}/>
             </Link>
-            <button className='nav-bar-right'>Login</button>
+            <div className='nav-bar-right'>
+            <Button variant="info" style={{marginRight: "16px"}}>Login</Button>{' '}
+            <Button variant="light">Signup</Button>
+            </div>
+            
             
         </div>
         <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
